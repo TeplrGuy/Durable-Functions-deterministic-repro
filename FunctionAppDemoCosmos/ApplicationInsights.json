@@ -1,0 +1,22 @@
+{
+    "instrumentation": {
+      "logging": {
+        "level": "INFO"
+      }
+    },
+      "sampling": {
+        "overrides": [
+          {
+            "telemetryType": "request",
+            "percentage": 0,
+            "attributes": [
+              {
+                "key": "http.url",
+                "value": ".*actuator.*",
+                "matchType": "regexp"
+              }
+            ]
+          }
+        ]
+      }
+}
